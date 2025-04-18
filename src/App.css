@@ -4,3 +4,17 @@
   padding: 2rem;
   text-align: left;
 }
+
+.person-box {
+  border: 2px solid tomato;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.title {
+  font: bolder;
+  text-align: center;
+  color: darkkhaki;
+  font-size: 28px;
+}
