@@ -1,8 +1,15 @@
 import './App.css'
 import Todo from './Todo'
+import Actors from './Actors'
+import Billis from './Billis'
 
 function App() {
 
+  const actors = ["Tom Cruise", "Chris Hemsworth", "Jackie Chan", "Christian Bell", "Paul Rudd", "Brad pitt", "Leonardo Di Caprio"]
+  const billi = [
+    { id: 1, name: "Mark", age: 32 },
+    { id: 2, name: "Jeff", age: 52 }
+  ]
 
   return (
     <>
@@ -18,7 +25,13 @@ function App() {
       <Todo task="Clean Table" status={true}></Todo>
       <Todo task="Read Book" status={false}></Todo>
       <Todo task="Wash Car" status={true}></Todo>
-
+      <h2>Fav Actors</h2>
+      {
+        actors.map(actor => <Actors id={actors.indexOf(actor)} name={actor}></Actors>)
+      }
+      {
+        billi.map(bill => <Billis id={bill.id} name={bill.name} age={bill.age}></Billis>)
+      }
     </>
   )
 }
